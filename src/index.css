@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background-color: #080c14;
+        color: #e8edf5;
+        min-height: 100vh;
+        overflow-x: hidden;
+        line-height: 1.6;
+    }
+
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    sub {
+        bottom: -0.25em;
+    }
+}
+
+@layer utilities {
+    .bg-grid-pattern {
+        background-image:
+            linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+
+    .gradient-text {
+        background: linear-gradient(135deg, #00e5ff 0%, #3d7eff 50%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .gradient-text-gold {
+        background: linear-gradient(135deg, #ffd700, #00e5ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .element-symbol-glow {
+        background: linear-gradient(135deg, #ffffff 0%, #00e5ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.5));
+    }
+
+    .conic-spinner {
+        background: conic-gradient(from 0deg,
+                transparent 0%,
+                rgba(0, 229, 255, 0.04) 25%,
+                transparent 50%);
+    }
+
+    .card-outer-glow {
+        border: 2px solid rgba(0, 229, 255, 0.3);
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.4), inset 0 0 40px rgba(0, 229, 255, 0.03);
+    }
+
+    .progress-glow {
+        box-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+    }
+
+    .text-glow-gold {
+        filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.5));
+    }
+}
